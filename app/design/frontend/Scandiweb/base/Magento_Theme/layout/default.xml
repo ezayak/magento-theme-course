@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <container name="top_banner_container" htmlTag="div" htmlClass="top_banner" before="-">
+                <block name="top_banner" template="Magento_Theme::banner/banner.phtml"  ifconfig="carriers/freeshipping/active"/>
+            </container>
+        </referenceContainer>
+        <move element="form.subscribe" destination="page.wrapper" after="main.content" before="page.bottom.container"/>
+    </body>
+</page>
